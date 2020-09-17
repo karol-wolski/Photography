@@ -1,0 +1,55 @@
+@import './mixins';
+@import './fonts';
+@import './colors';
+
+.carousel {
+  @include flex(flex-end, flex-end);
+  height: 70vh;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  &__item {
+    display: none;
+    flex-direction: column;
+    color: $primary;
+    max-width: 65rem;
+    animation-name: fade;
+    animation-duration: 1.5s;
+
+    &--active {
+      display: flex;
+    }
+
+    &-img {
+      @include pos-top-left(absolute);
+      width: 100vw;
+      height: 100vh;
+      @include z-index(carousel-image);
+      filter: brightness(60%);
+    }
+
+    &-title {
+      @include font($roboto, 4.6rem, 700);
+      padding-bottom: 1.5rem;
+      color: $accent-1;
+
+      @media all and (min-width: 768px) {
+        font-size: 6.2rem;
+      }
+    }
+
+    &-desc {
+      @include font($roboto, 1.8rem, 400);
+    }
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}

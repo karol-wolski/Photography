@@ -1,0 +1,54 @@
+@import './functions';
+
+@mixin font($family, $size, $weight: null, $style: null, $lineHeight: null) {
+  font-family: $family;
+  font-size: $size;
+  @if $weight != null {
+    font-weight: $weight;
+  }
+  @if $style != null {
+    font-style: $style;
+  }
+  @if $lineHeight != null {
+    line-height: $lineHeight;
+  } @else {
+    line-height: 1.5;
+  }
+}
+
+@mixin flex($justify-content, $align-items, $direction: unset, $wrap: unset) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+
+  @if $direction != unset {
+    flex-direction: $direction;
+  }
+  @if $wrap != unset {
+    flex-wrap: $wrap;
+  }
+}
+
+@mixin pos($position, $top, $right, $bottom, $left) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin pos-top-left($position, $top: 0, $left: 0) {
+  position: $position;
+  top: $top;
+  left: $left;
+}
+
+@mixin pos-top-right($position, $top: 0, $right: 0) {
+  position: $position;
+  top: $top;
+  right: $right;
+}
+
+@mixin z-index($key) {
+  z-index: z-index($key);
+}

@@ -4,9 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Photographer portfolio">
   <title>Photography</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
-  
+  <header class="header">
+    <h1>
+      John Smith
+      <span>Photographer</span>
+    </h1>
+    <nav class="navigation" role="navigation">
+      <button type="button" id="mobile-nav-button" aria-label="Menu" aria-controls="navigation" class="hamburger" aria-expanded="false">
+        <span class="hamburger__container">
+          <span class="hamburger__bars"></span>
+        </span>
+      </button>
+      <ul class="nav">
+        <li class="nav__item"><a href="" class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="" class="nav__link">About me</a></li>
+        <li class="nav__item"><a href="" class="nav__link">Portfolio</a></li>
+        <li class="nav__item"><a href="" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="carousel">
+      <div class="carousel__item carousel__item--active">
+        <img src="./img/newborn.jpg" alt="" class="carousel__item-img">
+        <h2 class="carousel__item-title">Newborn Photography</h2>
+        <p class="carousel__item-desc">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+      <div class="carousel__item">
+        <img src="./img/wedding.jpg" alt="" class="carousel__item-img">
+        <h2 class="carousel__item-title">Wedding Photography</h2>
+        <p class="carousel__item-desc">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+      <div class="carousel__item">
+        <img src="./img/family.jpg" alt="" class="carousel__item-img">
+        <h2 class="carousel__item-title">Family Photography</h2>
+        <p class="carousel__item-desc">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+      <div class="carousel__item">
+        <img src="./img/maternity.jpg" alt="" class="carousel__item-img">
+        <h2 class="carousel__item-title">Maternity Photography</h2>
+        <p class="carousel__item-desc">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </div>
+  </main>
 </body>
 </html>

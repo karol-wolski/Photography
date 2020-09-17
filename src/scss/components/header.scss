@@ -1,0 +1,26 @@
+@import '../mixins';
+@import '../colors.scss';
+@import '../fonts';
+
+.header {
+  @include flex(space-between, center, unset, wrap);
+  max-width: 120rem;
+  padding: 0 1.5rem;
+  margin: 1.5rem auto 0;
+  color: $accent-1;
+  position: relative;
+  @include z-index(header);
+
+  @media screen and (min-width: 768px) {
+    margin-top: 5rem;
+  }
+
+  h1 {
+    @include font($red-hat-text, 2.4rem, 400, null, 3.2rem);
+
+    span {
+      display: block;
+      @include font($red-hat-text, 2rem);
+    }
+  }
+}
