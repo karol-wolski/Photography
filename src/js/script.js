@@ -1,3 +1,10 @@
 import '../scss/style.scss'
+import showSlides from './carousel'
+import mobileMainNavigation from './navigation'
 
-console.log(`it's works!`)
+const init = () => {
+  mobileMainNavigation()
+  showSlides()
+}
+
+init()
