@@ -1,0 +1,13 @@
+@import '../colors.scss';
+@import '../mixins';
+@import '../fonts';
+
+.footer {
+  padding: 5rem 0 2.5rem;
+  &__desc {
+    @include font($roboto, 1.4rem, 500);
+    color: $secondary;
+    padding: 0 1.5rem;
+    text-align: center;
+  }
+}
