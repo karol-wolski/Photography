@@ -1,0 +1,21 @@
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 5rem 1.5rem 0;
+
+  @media screen and (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__image {
+    width: 100%;
+    max-height: 25rem;
+  }
+}

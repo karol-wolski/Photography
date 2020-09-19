@@ -22,6 +22,10 @@ module.exports = {
       filename: 'portfolio.html',
       template: './src/portfolio.html',
     }),
+    new HtmlWebpackPlugin({
+      filename: 'portfolio-single.html',
+      template: './src/portfolio-single.html',
+    }),
     new MiniCssExtractPlugin({
       filename: 'style.css',
     }),
@@ -82,7 +86,7 @@ module.exports = {
               outputPath: 'img',
               publicPath: 'img',
               esModule: false,
-              name: '[name].[ext]',
+              name: '[folder]/[name].[ext]',
             },
           },
         ],
