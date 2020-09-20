@@ -32,6 +32,8 @@ npm run build
 - https://unsplash.com/photos/LdJrAEnYDa0 <br>
 - https://unsplash.com/photos/MRWHSKimBJk <br>
 - https://unsplash.com/photos/ry_sD0P1ZL0 <br>
+- https://unsplash.com/photos/aS4Duj2j7r4 <br>
+- https://unsplash.com/photos/LyJdAZ3CQdU
 
 ## Libraries
 
