@@ -1,0 +1,44 @@
+@import './mixins';
+@import './colors.scss';
+@import './fonts';
+
+.contact {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 5rem 1.5rem 0;
+
+  &__container {
+    @include flex(space-between, flex-start, column);
+    padding-top: 2.5rem;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+
+  &__group {
+    width: 100%;
+    @media screen and (min-width: 768px) {
+      width: calc(50% - 1.5rem);
+    }
+  }
+
+  &__title {
+    @include font($roboto, 2.8rem, 700);
+    color: $secondary;
+
+    @media screen and (min-width: 768px) {
+      font-size: 4.8rem;
+    }
+  }
+
+  &__text {
+    @include font($roboto, 1.8rem, 400);
+    color: $secondary;
+    padding-bottom: 1.5rem;
+    & > a {
+      text-decoration: none;
+      color: $secondary;
+    }
+  }
+}
