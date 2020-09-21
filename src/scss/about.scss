@@ -1,0 +1,32 @@
+@import './mixins';
+@import './colors.scss';
+@import './fonts';
+
+.about {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 5rem 1.5rem 0;
+  @include font($roboto, 1.8rem, 400);
+  color: $secondary;
+
+  &__image {
+    margin: 1.5rem 0;
+    &--portrait {
+      max-width: 100%;
+      float: left;
+      margin-right: 3rem;
+
+      @media screen and (min-width: 768px) {
+        max-width: 35rem;
+      }
+    }
+
+    &--100 {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    @include font($roboto, 3.2rem, 700);
+  }
+}
