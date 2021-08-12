@@ -1,6 +1,6 @@
-# Photography
+# Photography website
 
-Photography is a website project. Technologies: HTML, SCSS and JavaScript.
+Photography website is a project that was made using technologies such as HTML, CSS and JavaScript. [Demo](https://karol-wolski.github.io/Photography/)
 
 ## Installation
 
