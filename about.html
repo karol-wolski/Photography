@@ -1,54 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Photographer portfolio">
-  <title>Photography</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400&display=swap" rel="stylesheet">
-<link href="style.css" rel="stylesheet"></head>
-<body>
-  <header class="header">
-    <h1>
-      John Smith
-      <span>Photographer</span>
-    </h1>
-    <nav class="navigation" role="navigation">
-      <button type="button" id="mobile-nav-button" aria-label="Menu" aria-controls="navigation" class="hamburger" aria-expanded="false">
-        <span class="hamburger__container">
-          <span class="hamburger__bars"></span>
-        </span>
-      </button>
-      <ul class="nav">
-        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-        <li class="nav__item"><a href="" class="nav__link">About me</a></li>
-        <li class="nav__item"><a href="portfolio.html" class="nav__link">Portfolio</a></li>
-        <li class="nav__item"><a href="" class="nav__link">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="section">
-      <h2 class="section__title">About me</h2>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Photographer portfolio">
+    <title>Photography</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet"></head>
+  <body>
+    <header class="header">
+      <h1>
+        John Smith
+        <span>Photographer</span>
+      </h1>
+      <nav class="navigation" role="navigation">
+        <button type="button" id="mobile-nav-button" aria-label="Menu" aria-controls="navigation" class="hamburger" aria-expanded="false">
+          <span class="hamburger__container">
+            <span class="hamburger__bars"></span>
+          </span>
+        </button>
+        <ul class="nav">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">About me</a></li>
+          <li class="nav__item">
+            <a href="portfolio.html" class="nav__link">Portfolio</a>
+          </li>
+          <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="section">
+        <h2 class="section__title">About me</h2>
 
-      <div class="about">
-        <img src="img/img/me.jpg" alt="John Smith" class="about__image about__image--portrait">
-        <h3 class="about__title">John Smith</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempus urna gravida justo euismod, quis blandit ante hendrerit. Aliquam vitae fermentum enim, quis lobortis augue. Aenean aliquam ullamcorper quam a pharetra. Integer aliquet pretium efficitur. Integer non condimentum dui. Suspendisse porttitor aliquam massa, ut finibus ex iaculis at. Etiam venenatis ultricies arcu eu tincidunt. Phasellus molestie vitae ante vitae congue. Cras pretium quam sed urna bibendum tincidunt. Aliquam nisl tortor, dapibus sit amet accumsan ac, faucibus in magna. Sed in mi eget nisi convallis imperdiet sollicitudin sit amet diam. Ut a suscipit nulla, nec eleifend sapien. Maecenas sollicitudin ultricies urna eget pretium. Ut quis sapien diam. Curabitur sem orci, pharetra aliquet enim ut, ullamcorper consectetur nunc. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut eget velit in velit tempus egestas sit amet vitae lectus. Sed interdum, sapien sit amet congue pharetra, ipsum urna lacinia sapien, et pulvinar magna mauris et orci. Morbi euismod suscipit dui. Maecenas nibh mauris, rutrum vel elementum nec, scelerisque non velit. Donec auctor in sapien id egestas. Pellentesque facilisis quis erat fringilla fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas volutpat tellus in nibh sagittis, eget vulputate turpis tristique. Phasellus a molestie quam. Phasellus varius pretium nisi. Vestibulum quis dignissim ante. Aenean auctor nulla vel purus varius mollis. Etiam elementum aliquet leo vitae viverra. Aenean congue ex nec magna tincidunt iaculis. Morbi a augue vitae arcu accumsan tristique et eget ex. Cras facilisis dignissim ante, sit amet convallis urna convallis sodales. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-        <br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempus urna gravida justo euismod, quis blandit ante hendrerit. Aliquam vitae fermentum enim, quis lobortis augue. Aenean aliquam ullamcorper quam a pharetra. Integer aliquet pretium efficitur. Integer non condimentum dui. Suspendisse porttitor aliquam massa, ut finibus ex iaculis at. Etiam venenatis ultricies arcu eu tincidunt. Phasellus molestie vitae ante vitae congue. Cras pretium quam sed urna bibendum tincidunt. Aliquam nisl tortor, dapibus sit amet accumsan ac, faucibus in magna. Sed in mi eget nisi convallis imperdiet sollicitudin sit amet diam. Ut a suscipit nulla, nec eleifend sapien. </p>
-        <img src="img/img/backstage.jpg" alt="Backstage" class="about__image about__image--100">
-        <p>Nulla at dolor vitae leo luctus condimentum. Vestibulum at turpis ut turpis fermentum gravida. Nam quis dolor mauris. Nulla nisl sapien, porta tristique ullamcorper non, aliquet a ante. Vivamus vitae leo aliquet, facilisis nibh scelerisque, semper diam. Cras dictum lacus quis molestie congue. Vivamus auctor nisl nec feugiat pellentesque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam tempor tortor non felis tempor tempus. Sed tempor ac sem et laoreet. Vestibulum porta turpis a orci venenatis, sed egestas mi accumsan. Suspendisse porta, orci vel ornare dictum, nunc odio venenatis enim, nec lobortis purus sem in nisi. Donec eget ultricies est. Donec non tempor ipsum. Suspendisse suscipit nisl a sapien tempor, in hendrerit lectus luctus. Integer tristique suscipit justo, eu suscipit justo pulvinar sed.</p>
-      </div>
-      
-    </section>
-  </main>
-  <footer class="footer">
-    <p class="footer__desc">
-      Copyright ® John Smith. All Rights Reserved. Made by Karol Wolski.
-    </p>
-  </footer>
-<script src="main.508d6541635409e94210.js"></script></body>
+        <div class="about">
+          <img src="img/img/me.jpg" alt="John Smith" class="about__image about__image--portrait">
+          <h3 class="about__title">John Smith</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            tempus urna gravida justo euismod, quis blandit ante hendrerit.
+            Aliquam vitae fermentum enim, quis lobortis augue. Aenean aliquam
+            ullamcorper quam a pharetra. Integer aliquet pretium efficitur.
+            Integer non condimentum dui. Suspendisse porttitor aliquam massa, ut
+            finibus ex iaculis at. Etiam venenatis ultricies arcu eu tincidunt.
+            Phasellus molestie vitae ante vitae congue. Cras pretium quam sed
+            urna bibendum tincidunt. Aliquam nisl tortor, dapibus sit amet
+            accumsan ac, faucibus in magna. Sed in mi eget nisi convallis
+            imperdiet sollicitudin sit amet diam. Ut a suscipit nulla, nec
+            eleifend sapien. Maecenas sollicitudin ultricies urna eget pretium.
+            Ut quis sapien diam. Curabitur sem orci, pharetra aliquet enim ut,
+            ullamcorper consectetur nunc. Orci varius natoque penatibus et
+            magnis dis parturient montes, nascetur ridiculus mus. Ut eget velit
+            in velit tempus egestas sit amet vitae lectus. Sed interdum, sapien
+            sit amet congue pharetra, ipsum urna lacinia sapien, et pulvinar
+            magna mauris et orci. Morbi euismod suscipit dui. Maecenas nibh
+            mauris, rutrum vel elementum nec, scelerisque non velit. Donec
+            auctor in sapien id egestas. Pellentesque facilisis quis erat
+            fringilla fringilla. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Maecenas volutpat tellus in nibh sagittis, eget
+            vulputate turpis tristique. Phasellus a molestie quam. Phasellus
+            varius pretium nisi. Vestibulum quis dignissim ante. Aenean auctor
+            nulla vel purus varius mollis. Etiam elementum aliquet leo vitae
+            viverra. Aenean congue ex nec magna tincidunt iaculis. Morbi a augue
+            vitae arcu accumsan tristique et eget ex. Cras facilisis dignissim
+            ante, sit amet convallis urna convallis sodales. Orci varius natoque
+            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+          </p>
+          <br>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            tempus urna gravida justo euismod, quis blandit ante hendrerit.
+            Aliquam vitae fermentum enim, quis lobortis augue. Aenean aliquam
+            ullamcorper quam a pharetra. Integer aliquet pretium efficitur.
+            Integer non condimentum dui. Suspendisse porttitor aliquam massa, ut
+            finibus ex iaculis at. Etiam venenatis ultricies arcu eu tincidunt.
+            Phasellus molestie vitae ante vitae congue. Cras pretium quam sed
+            urna bibendum tincidunt. Aliquam nisl tortor, dapibus sit amet
+            accumsan ac, faucibus in magna. Sed in mi eget nisi convallis
+            imperdiet sollicitudin sit amet diam. Ut a suscipit nulla, nec
+            eleifend sapien.
+          </p>
+          <img src="img/img/backstage.jpg" alt="Backstage" class="about__image about__image--100">
+          <p>
+            Nulla at dolor vitae leo luctus condimentum. Vestibulum at turpis ut
+            turpis fermentum gravida. Nam quis dolor mauris. Nulla nisl sapien,
+            porta tristique ullamcorper non, aliquet a ante. Vivamus vitae leo
+            aliquet, facilisis nibh scelerisque, semper diam. Cras dictum lacus
+            quis molestie congue. Vivamus auctor nisl nec feugiat pellentesque.
+            Orci varius natoque penatibus et magnis dis parturient montes,
+            nascetur ridiculus mus. Etiam tempor tortor non felis tempor tempus.
+            Sed tempor ac sem et laoreet. Vestibulum porta turpis a orci
+            venenatis, sed egestas mi accumsan. Suspendisse porta, orci vel
+            ornare dictum, nunc odio venenatis enim, nec lobortis purus sem in
+            nisi. Donec eget ultricies est. Donec non tempor ipsum. Suspendisse
+            suscipit nisl a sapien tempor, in hendrerit lectus luctus. Integer
+            tristique suscipit justo, eu suscipit justo pulvinar sed.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__desc">
+        Copyright ® John Smith. All Rights Reserved. Made by Karol Wolski.
+      </p>
+    </footer>
+  <script src="main.508d6541635409e94210.js"></script></body>
 </html>
