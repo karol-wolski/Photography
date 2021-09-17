@@ -274,6 +274,11 @@ html {
   max-width: 120rem;
   margin: 0 auto;
   padding: 5rem 1.5rem 0; }
+  .contact__map {
+    position: relative;
+    text-align: right;
+    height: 350px;
+    width: 100%; }
   .contact__container {
     display: flex;
     justify-content: space-between;
