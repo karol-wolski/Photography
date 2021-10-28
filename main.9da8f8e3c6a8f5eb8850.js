@@ -110,6 +110,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./src/js/alert.js":
+/*!*************************!*\
+  !*** ./src/js/alert.js ***!
+  \*************************/
+/*! exports provided: alert */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"alert\", function() { return alert; });\nvar alert = function alert(type, str) {\n  var hide = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;\n  var el = document.createElement('div');\n  el.classList.add('alert');\n\n  if (type === 'error') {\n    el.classList.add('alert--error');\n  } else if (type === 'success') {\n    el.classList.add('alert--success');\n  }\n\n  if (hide) {\n    setTimeout(function () {\n      el.remove();\n    }, 3000);\n  }\n\n  el.append(str);\n  return el;\n};\n\n\n\n//# sourceURL=webpack:///./src/js/alert.js?");
+
+/***/ }),
+
 /***/ "./src/js/carousel.js":
 /*!****************************!*\
   !*** ./src/js/carousel.js ***!
@@ -119,6 +131,54 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\nvar slideIndex = 0;\n\nfunction showSlides() {\n  var slides = document.getElementsByClassName('carousel__item');\n\n  if (slides.length > 0) {\n    for (var i = 0; i < slides.length; i++) {\n      slides[i].classList.remove('carousel__item--active');\n    }\n\n    slideIndex++;\n    if (slideIndex > slides.length) slideIndex = 1;\n    slides[slideIndex - 1].classList.add('carousel__item--active');\n    setTimeout(showSlides, 5000);\n  }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (showSlides);\n\n//# sourceURL=webpack:///./src/js/carousel.js?");
+
+/***/ }),
+
+/***/ "./src/js/constants.js":
+/*!*****************************!*\
+  !*** ./src/js/constants.js ***!
+  \*****************************/
+/*! exports provided: EMAIL, PHONE_NO, LETTERS */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"EMAIL\", function() { return EMAIL; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"PHONE_NO\", function() { return PHONE_NO; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"LETTERS\", function() { return LETTERS; });\nvar EMAIL = /^(([^<>()\\\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/;\nvar PHONE_NO = /^\\d{9}$/;\nvar LETTERS = /^[A-Za-z]+$/;\n\n\n//# sourceURL=webpack:///./src/js/constants.js?");
+
+/***/ }),
+
+/***/ "./src/js/contact.js":
+/*!***************************!*\
+  !*** ./src/js/contact.js ***!
+  \***************************/
+/*! exports provided: contactForm, contactFormSubmit */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"contactForm\", function() { return contactForm; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"contactFormSubmit\", function() { return contactFormSubmit; });\n/* harmony import */ var _alert__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./alert */ \"./src/js/alert.js\");\n/* harmony import */ var _helpers_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers/index */ \"./src/js/helpers/index.js\");\n/* harmony import */ var _locales_en__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./locales/en */ \"./src/js/locales/en.js\");\n\n\n\n\nvar checkField = function checkField(inputId) {\n  var required = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;\n  var onlyLetters = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;\n  var input = document.getElementById(inputId);\n  var value = input.value,\n      type = input.type;\n  var errorMsgContainer = input.nextElementSibling;\n  var message = '';\n\n  if (required === true) {\n    if (Object(_helpers_index__WEBPACK_IMPORTED_MODULE_1__[\"isRequired\"])(value)) {\n      message += _locales_en__WEBPACK_IMPORTED_MODULE_2__[\"messages\"].REQUIRED_ERR_MSG;\n    }\n  }\n\n  if (onlyLetters === true) {\n    if (!Object(_helpers_index__WEBPACK_IMPORTED_MODULE_1__[\"isLetters\"])(value)) {\n      message += _locales_en__WEBPACK_IMPORTED_MODULE_2__[\"messages\"].ONLY_LETTERS_ERR_MSG;\n    }\n  }\n\n  if (type === 'tel' && value.length > 0) {\n    if (!Object(_helpers_index__WEBPACK_IMPORTED_MODULE_1__[\"isPhoneNo\"])(value)) {\n      message += _locales_en__WEBPACK_IMPORTED_MODULE_2__[\"messages\"].PHONE_ERR_MSG;\n    }\n  }\n\n  if (type === 'email') {\n    if (!Object(_helpers_index__WEBPACK_IMPORTED_MODULE_1__[\"isEmail\"])(value)) {\n      message += _locales_en__WEBPACK_IMPORTED_MODULE_2__[\"messages\"].EMAIL_ERR_MSG;\n    }\n  }\n\n  if (message && errorMsgContainer || !message && errorMsgContainer) {\n    errorMsgContainer.remove();\n  }\n\n  if (message) {\n    input.parentElement.append(Object(_alert__WEBPACK_IMPORTED_MODULE_0__[\"alert\"])('error', message));\n    return false;\n  }\n\n  return true;\n};\n\nvar contactForm = function contactForm() {\n  var name = document.querySelector('#name');\n  var phone = document.querySelector('#phone');\n  var email = document.querySelector('#email');\n  var message = document.querySelector('#message');\n  var form = document.querySelector('#form-contact');\n  name.addEventListener('focusout', function () {\n    return checkField('name', true, true);\n  });\n  phone.addEventListener('focusout', function () {\n    return checkField('phone', false, false);\n  });\n  email.addEventListener('focusout', function () {\n    return checkField('email', true, false);\n  });\n  message.addEventListener('focusout', function () {\n    return checkField('message', true, false);\n  });\n  form.addEventListener('submit', function (e) {\n    return contactFormSubmit(e);\n  });\n};\n\nvar contactFormSubmit = function contactFormSubmit(e) {\n  e.preventDefault();\n  var isValid;\n  isValid = checkField('name', true, true) && checkField('phone', false, false) && checkField('email', true, false) && checkField('message', true, false);\n\n  if (isValid) {\n    e.target.reset();\n    e.target.append(Object(_alert__WEBPACK_IMPORTED_MODULE_0__[\"alert\"])('success', _locales_en__WEBPACK_IMPORTED_MODULE_2__[\"messages\"].SUCCESSFULLY_SEND_MSG, true));\n  }\n};\n\n\n\n//# sourceURL=webpack:///./src/js/contact.js?");
+
+/***/ }),
+
+/***/ "./src/js/helpers/index.js":
+/*!*********************************!*\
+  !*** ./src/js/helpers/index.js ***!
+  \*********************************/
+/*! exports provided: isEmail, isPhoneNo, isLetters, isRequired */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"isEmail\", function() { return isEmail; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"isPhoneNo\", function() { return isPhoneNo; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"isLetters\", function() { return isLetters; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"isRequired\", function() { return isRequired; });\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ \"./src/js/constants.js\");\n\n\nvar isEmail = function isEmail(str) {\n  return _constants__WEBPACK_IMPORTED_MODULE_0__[\"EMAIL\"].test(str);\n};\n\nvar isPhoneNo = function isPhoneNo(str) {\n  return _constants__WEBPACK_IMPORTED_MODULE_0__[\"PHONE_NO\"].test(str);\n};\n\nvar isLetters = function isLetters(str) {\n  return _constants__WEBPACK_IMPORTED_MODULE_0__[\"LETTERS\"].test(str);\n};\n\nvar isRequired = function isRequired(str) {\n  return str.length <= 0;\n};\n\n\n\n//# sourceURL=webpack:///./src/js/helpers/index.js?");
+
+/***/ }),
+
+/***/ "./src/js/locales/en.js":
+/*!******************************!*\
+  !*** ./src/js/locales/en.js ***!
+  \******************************/
+/*! exports provided: messages */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"messages\", function() { return messages; });\nvar messages = {\n  REQUIRED_ERR_MSG: 'Field is required.',\n  ONLY_LETTERS_ERR_MSG: 'Field should have only letters.',\n  PHONE_ERR_MSG: 'Field should have format: 500100500.',\n  EMAIL_ERR_MSG: 'Field should have format: john@doe.com.',\n  SUCCESSFULLY_SEND_MSG: 'Your e-mail has been successfully sent.'\n};\n\n\n//# sourceURL=webpack:///./src/js/locales/en.js?");
 
 /***/ }),
 
@@ -142,7 +202,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var focu
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/style.scss */ \"./src/scss/style.scss\");\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_style_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./carousel */ \"./src/js/carousel.js\");\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./navigation */ \"./src/js/navigation.js\");\n\n\n\n\nvar init = function init() {\n  Object(_navigation__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n  Object(_carousel__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n};\n\ninit();\n\n//# sourceURL=webpack:///./src/js/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/style.scss */ \"./src/scss/style.scss\");\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_style_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./carousel */ \"./src/js/carousel.js\");\n/* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact */ \"./src/js/contact.js\");\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./navigation */ \"./src/js/navigation.js\");\n\n\n\n\n\nvar init = function init() {\n  Object(_navigation__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n  Object(_carousel__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n  Object(_contact__WEBPACK_IMPORTED_MODULE_2__[\"contactForm\"])();\n};\n\ninit();\n\n//# sourceURL=webpack:///./src/js/script.js?");
 
 /***/ }),
 

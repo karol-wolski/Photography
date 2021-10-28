@@ -371,3 +371,19 @@ html {
     padding: 0 1.5rem;
     text-align: center; }
 
+.alert {
+  margin-top: 0.5rem;
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  padding: 1rem;
+  width: 100%; }
+  .alert--error {
+    border: 1px solid #aa2222;
+    background-color: #ab2222;
+    color: #fafafa; }
+  .alert--success {
+    border: 1px solid #00fc3f;
+    background-color: #00ff40;
+    color: #2f2f2f; }
+
