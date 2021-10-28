@@ -1,0 +1,20 @@
+@import '../_colors';
+@import '../_mixins';
+@import '../_fonts';
+
+.alert {
+  margin-top: 0.5rem;
+  @include font($red-hat-text, 1.2rem);
+  padding: 1rem;
+  width: 100%;
+  &--error {
+    border: 1px solid $error;
+    background-color: lighten($error, 0.3);
+    color: $primary;
+  }
+  &--success {
+    border: 1px solid darken($success, 0.5);
+    background-color: $success;
+    color: $secondary;
+  }
+}
